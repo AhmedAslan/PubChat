@@ -28,24 +28,28 @@ body {
 	color:#1ABC9C;
 }
 .left-area, .right-area {
-	float: left;
-	width: 450px;
-	margin-top: 30px;
-	margin-left: 5px;
 	background-color: #FFFFFF;
-	border: 1px solid #CCCCCC;
-	border-radius: 4px 4px 4px 4px;
-	box-shadow: 0 5px 25px #666666;
-	height: 475px;
-	max-width: 450px;
-	padding: 10px;
+    border: 1px solid #CCCCCC;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 5px 25px #666666;
+    float: left;
+    height: 475px;
+    margin-left: 8px;
+    margin-top: 30px;
+    max-width: 450px;
+    padding: 10px;
+    width: 450px;
 }
-.listbox {
+.list {
 	height: 430px;
-    margin: 15px 10px;
+    margin: 20px 10px;
+}
+.list legend {
+	font-weight: bold;
+	font-size: 25px;
 }
 .button {
-	margin-left: 20px;
+	float: right;
 	border: 1px solid #0a3c59;
 	background: #3e779d;
 	background: -webkit-gradient(linear, left top, left bottom, from(#65a9d7), to(#3e779d));
@@ -93,6 +97,9 @@ body {
 	color: #ff0000;
 }
 .search-button {
+	margin-top: 5px;
+	margin-right: 3px;
+	float: right;
 	border: 1px solid #0a3c59;
 	background: #64dfdf;
 	background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#64dfdf));
@@ -138,4 +145,41 @@ body {
 	background: -o-linear-gradient(top, #ffffff, #ffffff);
 	background-image: -ms-linear-gradient(top, #ffffff 0%, #ffffff 100%);
 	color: #000000;
+}
+.search-div {
+	border: 1px solid #ADADAD;
+    border-radius: 5px 5px 5px 5px;
+    float: right;
+    height: 45px;
+    width: 300px;
+}
+.search-div input[type=text] {
+	height: 20px;
+    margin-left: 5px;
+    margin-top: 10px;
+    width: 200px;
+}
+.rooms-list, .visitors-list {
+	border: 1px solid #ADADAD;
+	height: 350px;
+}
+.create-rooms table {
+	margin: 50px auto;
+}
+.create-rooms td {
+	height: 50px;
+	width: 120px;
+}
+.create-rooms input[type=text] {
+	height: 20px;
+	width: 200px;
+}
+.create-rooms .button {
+	float: none;
+	margin-left: 16px;
+	margin-right: 16px;
+}
+.create-rooms div {
+	margin: 50px auto;
+	width: 230px;
 }
