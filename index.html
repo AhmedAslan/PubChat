@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Pub Chat</title>		
+
+		<link rel="icon" type="image/png" href="images/favicon.png">		
+		
+		<link rel="stylesheet" href="css/style.css" />
+
+		<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+		<script src="http://cdn.pubnub.com/pubnub-3.5.1.js"></script>
+		<script src="js/messenger.js"></script>
+
+		<script style="text/javascript">
+			$(document).ready(function() {
+				$('#create-rooms').click(function() {
+					$('.left-area legend').text("Create New Room");
+					$(this).hide();
+					$('.rooms-list').hide();
+					$('.create-rooms').show();
+					$('#room-name').val("");
+					$('#room-creator').val("");
+				});
+
+				$('#create').click(function() {
+					if ($('#room-name').val() == "")
+						$('#name-error').text("* This field requires to be filled.");
+					else
+						$('#name-error').text("");
+					if ($('#room-creator').val() == "")
+						$('#creator-error').text("* This field requires to be filled.");
+					else
+						$('#creator-error').text("");
+				});
+
+				$('#cancel').click(function() {
+					window.location.href = "index.html";
+				});
+			});
+		</script>
+
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="header">
+				<a href="index.html"><img src="images/logo.png" alt="" /></a>
+				<label class="title">PubChat</label>
+				<div class="top-link">
+					<a href="document.html">Documentation</a>
+					&nbsp;&nbsp;<b>|</b>&nbsp;&nbsp; <a href="#">Walkthrough</a>
+				</div>
+			</div>
+
+			<!-- Home Page -->
+			<div align="center" id="homePage" class="type-home">
+				<div>
+					<label>Your Name</label>
+					&nbsp;&nbsp;&nbsp;
+					<input type="text" name="name" id="username" placeholder="Name" />
+				</div>
+				<br />
+				<a href="#" id="startChatButton" class="button">Start Chatting!</a>
+			</div>
+			<!-- /Home page -->
+
+			<!-- Chat List Page -->
+			<div id="chatListPage" class="type-chat-list">
+				<div>
+					<h1>Current Chats</h1>
+				</div>
+				<div>
+					<input type="text" name="name" id="chatRoomName" placeholder="Chat Room Name" />
+					<a href="#" id="newChatButton">Join New Chat</a>
+				</div>
+				<br />
+				<ul id="chatList">
+					<!-- <li><span class="username">User123:</span>This is my message.</li> -->
+				</ul>
+			</div>
+			<!-- /Chat List page -->
+
+			<!-- Chat Page -->
+			<div id="chatPage" class="type-interior">
+
+				<div>
+					<div class="content-primary">
+						<div>
+							<h1>Pub Messenger</h1>
+						</div>
+						<div>
+							<ul id="messageList">
+								<!-- <li><span class="username">User123:</span>This is my message.</li> -->
+							</ul>
+						</div>
+						<div>
+							<textarea id="messageContent">
+								
+							</textarea>
+							<div class="ui-grid-a">
+								<div class="ui-block-a">
+									<a href="#" id="sendMessageButton">Send Message</a>
+								</div>
+								<div class="ui-block-b">
+									<a href="#" id="backButton">Chat Rooms</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="content-secondary">
+						<ul id="userList">
+
+						</ul>
+					</div>
+				</div><!-- /content -->
+
+			</div><!-- /page -->
+
+			<!--
+			<div class="content">
+			<div class="left-area">
+			<fieldset class="list">
+			<legend>
+			Rooms List
+			</legend>
+			<a href='#' class='button' id="create-rooms">Create Room</a>
+			<div style="clear: both;">
+			&nbsp;
+			</div>
+			<div class="rooms-list">
+			room1
+			</div>
+			<div class="create-rooms" style="display: none;">
+			<table>
+			<tr>
+			<td><label>Room Name</label></td>
+			<td>
+			<input type="text" id="room-name" />
+			</td>
+			</tr>
+			<tr>
+			<td>&nbsp;</td>
+			<td><label id="name-error">&nbsp;</label></td>
+			</tr>
+			<tr>
+			<td><label>Room Creator</label></td>
+			<td>
+			<input type="text" id="room-creator" />
+			</td>
+			</tr>
+			<tr>
+			<td>&nbsp;</td>
+			<td><label id="creator-error">&nbsp;</label></td>
+			</tr>
+			</table>
+			<div>
+			<a href='#' class='button' id="create">Create</a>
+			<a href='#' class='button' id="cancel">Cancel</a>
+			</div>
+			</div>
+			</fieldset>
+			</div>
+			<div class="right-area">
+			<fieldset class="list">
+			<legend>
+			Visitors List
+			</legend>
+			<div class="search-div">
+			<input type="text" id="search" name="search" />
+			<a href='#' class='search-button'>Search</a>
+			</div>
+			<div style="clear: both; height: 7px;">
+			&nbsp;
+			</div>
+			<div class="visitors-list">
+			visitor1
+			</div>
+			</fieldset>
+			</div>
+			</div>-->
+
+		</div>
+	</body>
+</html>
+

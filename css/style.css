@@ -25,31 +25,48 @@ body {
 	color: #0000FF;
 }
 .top-link a:hover {
-	color:#1ABC9C;
+	color: #1ABC9C;
+}
+.type-home {
+	background-color: #FFFFFF;
+	border: 1px solid #CCCCCC;
+	border-radius: 4px 4px 4px 4px;
+	box-shadow: 0 5px 25px #666666;
+	max-width: 500px;
+	margin: 50px auto;
+	height: 100px;
+	padding-top: 20px;
+}
+.type-chat-list {
+	max-width: 700px;
+	margin: auto;
+	display: none;
+}
+.type-interior {
+	display: none;
 }
 .left-area, .right-area {
 	background-color: #FFFFFF;
-    border: 1px solid #CCCCCC;
-    border-radius: 4px 4px 4px 4px;
-    box-shadow: 0 5px 25px #666666;
-    float: left;
-    height: 475px;
-    margin-left: 8px;
-    margin-top: 30px;
-    max-width: 450px;
-    padding: 10px;
-    width: 450px;
+	border: 1px solid #CCCCCC;
+	border-radius: 4px 4px 4px 4px;
+	box-shadow: 0 5px 25px #666666;
+	float: left;
+	height: 475px;
+	margin-left: 8px;
+	margin-top: 30px;
+	max-width: 450px;
+	padding: 10px;
+	width: 450px;
 }
 .list {
 	height: 430px;
-    margin: 20px 10px;
+	margin: 20px 10px;
 }
 .list legend {
 	font-weight: bold;
 	font-size: 25px;
 }
 .button {
-	float: right;
 	border: 1px solid #0a3c59;
 	background: #3e779d;
 	background: -webkit-gradient(linear, left top, left bottom, from(#65a9d7), to(#3e779d));
@@ -148,16 +165,16 @@ body {
 }
 .search-div {
 	border: 1px solid #ADADAD;
-    border-radius: 5px 5px 5px 5px;
-    float: right;
-    height: 45px;
-    width: 300px;
+	border-radius: 5px 5px 5px 5px;
+	float: right;
+	height: 45px;
+	width: 300px;
 }
 .search-div input[type=text] {
 	height: 20px;
-    margin-left: 5px;
-    margin-top: 10px;
-    width: 200px;
+	margin-left: 5px;
+	margin-top: 10px;
+	width: 200px;
 }
 .rooms-list, .visitors-list {
 	border: 1px solid #ADADAD;
@@ -182,4 +199,7 @@ body {
 .create-rooms div {
 	margin: 50px auto;
 	width: 230px;
+}
+#name-error, #creator-error {
+	color: #FF0000;
 }
