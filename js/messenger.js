@@ -132,11 +132,12 @@ $(document).ready(function () {
     chatListEl.empty();
     for(var i = 0; i < pubnub.subscriptions.length; i++) {
       var chatName = pubnub.subscriptions[i],
-          chatEl = $("<li><a href='#chatPage' data-channel-name='" + chatName + "'>" 
+          chatEl = $("<li><a href='#chatPage' data-channel-name='" + chatName 
+            + "' class='room-button'>" 
             + chatName 
-            + "</a><a href='#delete' data-rel='dialog' data-channel-name='" + chatName + "'></a></li>");
+            + "</a><a href='#delete' class='button delete'>delete</a></li>");
       chatListEl.append(chatEl);
-      chatListEl.listview('refresh');
+      /*chatListEl.listview('refresh');*/
     }
 
     newChatButton.off('click');
@@ -174,11 +175,13 @@ $(document).ready(function () {
   function ChatView(event, data) {
   	$('#chatPage').show();
     var self = this;
-
+	
+    /*
     if (data.options && data.options.link) {
-      chatChannel = data.options.link.attr('data-channel-name');
-    }
-
+          chatChannel = data.options.link.attr('data-channel-name');
+        }*/
+    
+	
     users = [];
     messageList.empty();
     userList.empty();
@@ -300,7 +303,7 @@ $(document).ready(function () {
   // This code essentially does what routing does in Backbone.js.
   // It takes the page destination and creates a view based on what
   // page the user is navigating to.
-  $(document).bind("pagechange", function (event, data) {
+  $(document).bind("pagechange", function (event, data) {alert("here");
     if (data.toPage[0] == pages.chatList[0]) {
       currentView = new ChatListView(event, data);
     } else if (data.toPage[0] == pages.delete[0]) {
