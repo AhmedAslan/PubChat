@@ -2,40 +2,21 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>Pub Chat</title>		
+		<title>Pub Chat</title>
 
-		<link rel="icon" type="image/png" href="images/favicon.png">		
-		
+		<link rel="icon" type="image/png" href="images/favicon.png">
+
 		<link rel="stylesheet" href="css/style.css" />
 
 		<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
 		<script src="http://cdn.pubnub.com/pubnub-3.5.1.js"></script>
+		<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
 		<script src="js/messenger.js"></script>
 
-		<script style="text/javascript">
+		<script type="text/javascript">
 			$(document).ready(function() {
-				$('#create-rooms').click(function() {
-					$('.left-area legend').text("Create New Room");
-					$(this).hide();
-					$('.rooms-list').hide();
-					$('.create-rooms').show();
-					$('#room-name').val("");
-					$('#room-creator').val("");
-				});
-
-				$('#create').click(function() {
-					if ($('#room-name').val() == "")
-						$('#name-error').text("* This field requires to be filled.");
-					else
-						$('#name-error').text("");
-					if ($('#room-creator').val() == "")
-						$('#creator-error').text("* This field requires to be filled.");
-					else
-						$('#creator-error').text("");
-				});
-
-				$('#cancel').click(function() {
-					window.location.href = "index.html";
+				$('#popupBoxClose').click(function() {
+					$('#popup_box').fadeOut(50);
 				});
 			});
 		</script>
@@ -73,6 +54,7 @@
 				<div align="center">
 					<h1>Current Chat Rooms</h1>
 				</div>
+				<br />
 				<ul id="chatList">
 					<!-- <li><span class="username">User123:</span>This is my message.</li> -->
 				</ul>
@@ -180,6 +162,9 @@
 			</div>-->
 
 		</div>
+		<div id="popup_box">
+			<h1>This IS A Cool PopUp</h1>
+			<a id="popupBoxClose">Close</a>
+		</div>
 	</body>
 </html>
-
