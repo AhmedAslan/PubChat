@@ -150,7 +150,9 @@ $(document).ready(function() {
 	// Delete Chat View
 	///////
 	function DeleteChatView(event, data) {
-		var channelName = chatChannel, deleteButton = pages.deleteRoom.find("#deleteButton");
+		var channelName = chatChannel, 
+			deleteButton = pages.deleteRoom.find("#deleteButton");
+		$('#popup_box label').text('Room Name : "' + channelName + '"');
 		loadPopupBox();
 		/*
 		 if (data.options && data.options.link) {

@@ -15,7 +15,7 @@
 
 		<script type="text/javascript">
 			$(document).ready(function() {
-				$('#popupBoxClose').click(function() {
+				$('#close').click(function() {
 					$('#popup_box').fadeOut(50);
 				});
 			});
@@ -163,8 +163,10 @@
 
 		</div>
 		<div id="popup_box">
-			<h1>This IS A Cool PopUp</h1>
-			<a id="popupBoxClose">Close</a>
+			<label>&nbsp;</label>
+			<h1>Would you like to delete this room?</h1>
+			<a href="#cancel" id="close" class="button">Cancel</a>
+			<a href="#yes" id="yes" class="button">Delete</a>
 		</div>
 	</body>
 </html>
