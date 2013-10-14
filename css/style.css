@@ -169,13 +169,13 @@ body {
     border: 2px solid #FF0000;
     box-shadow: 0 0 5px #FF0000;
     display: none;
-    height: 250px;
-    left: 355px;
+    height: 255px;
+    left: 24%;
     margin-left: 15px;
     padding: 15px;
     position: fixed;
-    top: 200px;
-    width: 670px;
+    top: 213px;
+    width: 680px;
     z-index: 100;
 }
 #popup_box label {
