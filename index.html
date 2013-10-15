@@ -1,120 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>Pub Chat</title>
+<html>
+  <head>
+    <title>Pub Chat</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/style.css" rel="stylesheet" media="screen">
+    
+    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <script src="http://cdn.pubnub.com/pubnub-3.5.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/function.js"></script>
+    
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.navbar-brand').css('margin-left', 240 * ($(window).width() / 1440));
+            $(window).resize(function () {
+                $('.navbar-brand').css('margin-left', 240 * ($(window).width() / 1440));
+            });
+            
+            $('#close').click(function() {
+                $('#popup_box').fadeOut(50);
+            });
+        });
+    </script>   
+  </head>
+  
+  <body>
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+            <img src="images/logo.png"/>
+        </a>
+      </div>
+      
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="top-link nav navbar-nav navbar-right">
+          <li><a href="document.html">Documentation</a></li>
+          <li><a href="#">Walkthrough</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+        <!-- Home Page -->
+        <div align="center" id="homePage" class="type-home">
+            <div>
+                <label>Your Name</label>
+                &nbsp;&nbsp;&nbsp;
+                <input type="text" placeholder="Name" 
+                       name="name" id="username" />
+            </div>
+            <br />
+            <a href="#" id="startChatButton" class="button">
+                Start Chatting!
+            </a>
+        </div>
+        <!-- /Home page -->
+        
+        <!-- Chat List Page -->
+        <div id="chatListPage" class="type-chat-list">
+            <div align="center">
+                <input type="text" placeholder="Chat Room Name" 
+                       name="name" id="chatRoomName" />
+                <a href="#" id="newChatButton" class="button">
+                    Join New Chat
+                </a>
+            </div>
+            <div align="center">
+                <h1>Current Chat Rooms</h1>
+            </div>
+            <br />
+            <ul id="chatList">                
+            </ul>
+        </div>
+        <!-- /Chat List page -->
 
-	<link rel="icon" type="image/png" href="images/favicon.png">
-
-	<link rel="stylesheet" href="css/style.css" />
-
-	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
-	<script src="http://cdn.pubnub.com/pubnub-3.5.1.js"></script>
-	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
-	<script src="js/function.js"></script>
-
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$('#close').click(function() {
-				$('#popup_box').fadeOut(50);
-			});
-		});
-	</script>
-
-</head>
-<body>
-	<div class="wrapper">
-		<div class="header">
-			<a href="index.html">
-				<img src="images/logo.png"/>
-			</a>
-			<label class="title">PubChat</label>
-			<div class="top-link">
-				<a href="document.html">Documentation</a>
-				&nbsp;&nbsp;<b>|</b>&nbsp;&nbsp; 
-				<a href="#">Walkthrough</a>
-			</div>
-		</div>
-
-		<!-- Home Page -->
-		<div align="center" id="homePage" class="type-home">
-			<div>
-				<label>Your Name</label>
-				&nbsp;&nbsp;&nbsp;
-				<input type="text" placeholder="Name" 
-					   name="name" id="username" />
-			</div>
-			<br />
-			<a href="#" id="startChatButton" class="button">
-				Start Chatting!
-			</a>
-		</div>
-		<!-- /Home page -->
-
-		<!-- Chat List Page -->
-		<div id="chatListPage" class="type-chat-list">
-			<div align="center">
-				<input type="text" placeholder="Chat Room Name" 
-					   name="name" id="chatRoomName" />
-				<a href="#" id="newChatButton" class="button">
-					Join New Chat
-				</a>
-			</div>
-			<div align="center">
-				<h1>Current Chat Rooms</h1>
-			</div>
-			<br />
-			<ul id="chatList">				
-			</ul>
-		</div>
-		<!-- /Chat List page -->
-
-		<!-- Chat Page -->
-		<div id="chatPage" class="type-interior">
-			<div>
-				<!-- content -->
-				<div class="content-primary">
-					<div>
-						<h1>&nbsp;</h1>
-					</div>
-					<div>
-						<ul id="messageList">
-						</ul>
-					</div>
-					<div>
-						<textarea id="messageContent">
-						</textarea>
-						<div class="ui-grid-a">
-							<div class="ui-block-a">
-								<a href="#" id="sendMessageButton">
-									Send Message
-								</a>
-							</div>
-							<div class="ui-block-b">
-								<a href="#" id="backButton">
-									Chat Rooms
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="content-secondary">
-					<ul id="userList">
-					</ul>
-				</div>
-			</div>
-			<!-- /content -->
-		</div>
-		<!-- /Chat Page -->
-	</div>
-	
-	<!-- Delete Confirm Pop Up page -->
-	<div id="popup_box">
-		<label>&nbsp;</label>
-		<h1>Would you like to delete this room?</h1>
-		<a href="#cancel" id="close" class="button">Cancel</a>
-		<a href="#yes" id="yes" class="button">Delete</a>
-	</div>
-	<!-- /Delete Confirm Pop Up page -->
-</body>
+        <!-- Chat Page -->
+        <div id="chatPage" class="type-interior">
+            <div>
+                <!-- content -->
+                <div class="content-primary">
+                    <div>
+                        <h1>&nbsp;</h1>
+                    </div>
+                    <div>
+                        <ul id="messageList">
+                        </ul>
+                    </div>
+                    <div>
+                        <textarea id="messageContent">
+                        </textarea>
+                        <div class="ui-grid-a">
+                            <div class="ui-block-a">
+                                <a href="#" id="sendMessageButton">
+                                    Send Message
+                                </a>
+                            </div>
+                            <div class="ui-block-b">
+                                <a href="#" id="backButton">
+                                    Chat Rooms
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-secondary">
+                    <ul id="userList">
+                    </ul>
+                </div>
+            </div>
+            <!-- /content -->
+        </div>
+        <!-- /Chat Page -->
+        
+        <!-- Delete Confirm Pop Up page -->
+        <div id="popup_box">
+            <label>&nbsp;</label>
+            <h1>Would you like to delete this room?</h1>
+            <a href="#cancel" id="close" class="button">Cancel</a>
+            <a href="#yes" id="yes" class="button">Delete</a>
+        </div>
+        <!-- /Delete Confirm Pop Up page -->
+    </div>
+  </body>
 </html>

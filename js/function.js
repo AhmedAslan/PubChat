@@ -111,6 +111,9 @@ $(document).ready(function() {
 	///////
 	function ChatListView(event, data) {
 		$('#chatListPage').show();
+		
+		if ($('#chatRoomName').val() != "") $('#chatRoomName').val("");
+		
 		chatListEl.empty();
 		
 		for (var i = 0; i < pubnub.subscriptions.length; i++) {
@@ -184,6 +187,26 @@ $(document).ready(function() {
 		messageList.empty();
 		userList.empty();
 		
+		pubnub.unsubscribe({
+	      channel: chatChannel
+	    });
+	
+	    pubnub.subscribe({
+	      channel: chatChannel,
+	      message: self.handleMessage,
+	      presence   : function( message, env, channel ) {
+	        if (message.action == "join") {
+	          users.push(message.uuid);
+	          userList.append("<li data-username='" + message.uuid + "'>" + message.uuid + "</li>");
+	        } else {
+	          users.splice(users.indexOf(message.uuid), 1);
+	          userList.find('[data-username="' + message.uuid + '"]').remove();
+	        }
+	
+	        userList.listview('refresh');
+	      }
+	    });
+		
 		// Change the title to the chat channel.
 		pages.chat.find("h1:first").text(chatChannel);
 
@@ -248,7 +271,8 @@ $(document).ready(function() {
 			
 			pages.chat.hide();
 			
-			pages.chatList.show();
+			ChatListView();
+			/*pages.chatList.show();*/
 		});
 	};
 
