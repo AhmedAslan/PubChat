@@ -75,6 +75,9 @@ body, .navbar-default {
     list-style: none;
     width: 630px;
 }
+#userList li {
+	list-style: none;
+}
 .button {
     background: #3e779d;
     background: -webkit-gradient(linear, left top, left bottom, from(#65a9d7), to(#3e779d));
@@ -208,5 +211,7 @@ body, .navbar-default {
 	margin-top: 20px;
 }
 .content-secondary {
-	padding-right: 10px;
+	padding-right: 20px;
+	font-weight: bold;
+	font-size: 20px;
 }
