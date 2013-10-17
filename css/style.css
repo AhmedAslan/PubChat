@@ -2,14 +2,16 @@ body, .navbar-default {
     background: url(../images/back-color.png);
     border: none;
 }
+.navbar {
+	margin: 20px auto;
+	max-width: 1000px;
+}
+.container {
+	padding-bottom: 10px;
+    padding-top: 20px;
+}
 .collapse {
     max-width: 1170px;
-}
-.navbar-brand {
-    margin-left: 60%;
-}
-.navbar-header {
-    max-width: 400px;
 }
 .top-link {
     margin-top: 20px;
@@ -20,13 +22,180 @@ body, .navbar-default {
 .top-link a:hover {
     color: #1ABC9C;
 }
+@media (min-width:320px) and (max-width:480px) {
+	.navbar {
+		margin-top:10px;
+	}
+	.navbar-brand {
+	    margin-left: 0px;
+	}
+	.navbar-toggle {
+		margin-top: 15px;
+	}
+	.type-home {
+		margin: 0px auto;
+	}
+	.type-chat-list {
+		margin: 0px auto;
+	}
+	.type-chat-list div:first-child {
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	.type-chat-list h1 {
+		font-size: 23px;
+		font-weight: bold;
+	}
+	#chatRoomName {
+		width: 100%;
+	}
+	.newChat {
+		margin-top: 20px;
+	}
+	.rooms {
+		margin: 0px 10px;
+	}
+	.room-button {
+		width: 70%;
+	}
+	.type-interior {
+		margin: 0px auto;
+	}
+	.ui-block a {
+		float: left;
+		margin-right:3px;
+	}
+	#popup_box {
+		height: 245px;
+	    padding: 15px;
+	    position: fixed;
+	    top: 188px;
+	    width: 290px;
+	}
+	#popup_box label {
+	    font-size: 15px;
+	}
+	#popup_box h1 {	    
+	    font-size: 30px;
+	    margin-bottom: 60px;
+	    margin-left: 10px;
+	    margin-top: 5px;
+	}
+}
+@media (min-width: 480px) and (max-width: 640px) {
+	#popup_box {
+		height: 200px;
+	    padding: 15px;
+	    position: fixed;
+	    top: 188px;
+	    width: 450px;
+	}
+	#popup_box label {
+	    font-size: 18px;
+	}
+	#popup_box h1 {	    
+	    font-size: 25px;
+	    margin-bottom: 40px;
+	    margin-left: 5px;
+	    margin-top: 5px;
+	}
+}
+@media (min-width: 640px) and (max-width: 980px) {
+	.navbar-brand {
+	    margin-left: 20%;
+	}
+	.top-link {
+	    padding-right: 10%;
+	}
+	.type-home {
+		margin-left: 14%;
+	}
+	.type-chat-list div:first-child {
+		margin: 10px auto;
+		width: 60%;
+	}
+	.type-chat-list h1 {
+		font-size: 32px;
+	}
+	.newChat {
+		float: right;
+    	margin-right: 25px;
+	}
+	.rooms {
+		margin: 0px auto;
+	}
+	.room-button {
+		width: 88%;
+	}
+	#popup_box {
+		height: 250px;
+	    padding: 15px;
+	    position: fixed;
+	    top: 188px;
+	    width: 700px;
+	}
+	#popup_box label {
+	    font-size: 25px;
+	}
+	#popup_box h1 {	    
+	    font-size: 40px;
+	    margin-bottom: 60px;
+	    margin-left: 20px;
+	    margin-top: 25px;
+	}
+}
+@media (min-width: 1024px) and (max-width: 1440px) {
+	.collapse {
+	    max-width: 1000px;
+	}
+	.type-home {
+		margin-left: 24%;
+		margin-top: 20px;
+	}
+	.type-chat-list {
+		max-width: 800px;
+		margin: 0 auto;
+	}
+	.type-chat-list div:first-child {
+		margin: 10px auto;
+		width: 60%;
+	}
+	.type-chat-list h1 {
+		font-size: 32px;
+	}
+	.newChat {
+		float: right;
+    	margin-right: 70px;
+	}
+	.rooms {
+		margin: 0px auto;
+	}
+	.room-button {
+		width: 88%;
+	}
+	#popup_box {
+		height: 250px;
+	    padding: 15px;
+	    position: fixed;
+	    top: 188px;
+	    width: 700px;
+	}
+	#popup_box label {
+	    font-size: 25px;
+	}
+	#popup_box h1 {	    
+	    font-size: 40px;
+	    margin-bottom: 40px;
+	    margin-left: 20px;
+	    margin-top: 20px;
+	}
+} 
 .type-home {
     background-color: #FFFFFF;
     border: 1px solid #CCCCCC;
     border-radius: 4px 4px 4px 4px;
     box-shadow: 0 5px 25px #666666;
     max-width: 500px;
-    margin: 50px auto;
     height: 120px;
     padding-top: 20px;
 }
@@ -35,48 +204,78 @@ body, .navbar-default {
     border: 1px solid #CCCCCC;
     border-radius: 4px 4px 4px 4px;
     box-shadow: 0 5px 25px #666666;
-    margin: 20px auto;
-    max-width: 700px;
-    margin: 50px auto;
     display: none;
 }
 .type-chat-list div:first-child {
-    border: 1px solid #0a3c59;
-    height: 40px;
-    margin: 30px auto;
-    padding-top: 10px;
-    width: 400px;
-}
-.type-chat-list div {
-    border-bottom: 3px double #0A3C59;
-    height: 40px;
-    margin: 0 auto;
-    width: 400px;
+    border: 1px solid #0A3C59;
+    margin-top: 20px;
+    padding: 10px 20px;
 }
 .type-chat-list h1 {
     color: #0000FF;
     font-family: Verdana;
 }
 .type-chat-list input[type=text] {
-    height: 20px;
-    margin-right: 80px;
+    height: 30px;
+}
+.rooms {
+    border-bottom: 3px double #0A3C59;
+    max-width: 400px;
 }
 .type-interior {
 	background-color: #FFFFFF;
     border: 1px solid #CCCCCC;
     border-radius: 4px 4px 4px 4px;
     box-shadow: 0 5px 25px #666666;
-    max-width: 700px;
-    margin: 50px auto;
     display: none;
+}
+#chatList {
+	padding: 10px;
 }
 #chatList li {
     height: 40px;
     list-style: none;
-    width: 630px;
 }
 #userList li {
 	list-style: none;
+	color: #FF0000;
+}
+#popup_box {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 2px solid #FF0000;
+    box-shadow: 0 0 5px #FF0000;
+    display: none;
+    z-index: 100;
+}
+#popup_box label {
+    color: #0000FF;
+    margin: 10px auto;
+}
+#popup_box h1 {
+    color: #FF0000;
+}
+#popup_box a {
+    float: right;
+    margin-right: 40px;
+}
+.content-primary {
+	padding: 10px;
+}
+.content-primary h1 {
+	border-bottom: 3px double #0A3C59;
+	color: #0000FF;
+}
+.content-primary textarea {
+	height: 100%;
+	width: 100%; 
+}
+.ui-grid {
+	margin-top: 20px;
+}
+.content-secondary {
+	padding-right: 20px;
+	font-weight: bold;
+	font-size: 20px;
 }
 .button {
     background: #3e779d;
@@ -137,7 +336,6 @@ body, .navbar-default {
     text-decoration: none;
     text-shadow: 0 1px 0 #7EA4BD;
     vertical-align: middle;
-    width: 520px;
 }
 .room-button:hover {
     text-shadow: #1e4158 0 1px 0;
@@ -167,51 +365,4 @@ body, .navbar-default {
 }
 .delete:active {
     color: #000;
-}
-#popup_box {
-    background: none repeat scroll 0 0 #FFFFFF;
-    border: 2px solid #FF0000;
-    box-shadow: 0 0 5px #FF0000;
-    display: none;
-    height: 290px;
-    left: 24%;
-    margin-left: 24px;
-    padding: 15px;
-    position: fixed;
-    top: 205px;
-    width: 700px;
-    z-index: 100;
-}
-#popup_box label {
-    font-size: 25px;
-    margin: 10px auto;
-    color: #0000FF;
-}
-#popup_box h1 {
-    color: #FF0000;
-    margin-bottom: 80px;
-    margin-left: 90px;
-    margin-top: 40px;
-}
-#popup_box a {
-    float: right;
-    margin-right: 40px;
-}
-.content-primary {
-	padding: 10px;
-}
-.content-primary h1 {
-	border-bottom: 3px double #0A3C59;
-}
-.content-primary textarea {
-	height: 100%;
-	width: 100%; 
-}
-.ui-grid {
-	margin-top: 20px;
-}
-.content-secondary {
-	padding-right: 20px;
-	font-weight: bold;
-	font-size: 20px;
 }

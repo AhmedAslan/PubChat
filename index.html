@@ -17,11 +17,6 @@
     
     <script type="text/javascript">
         $(document).ready(function() {
-            $('.navbar-brand').css('margin-left', 240 * ($(window).width() / 1440));
-            $(window).resize(function () {
-                $('.navbar-brand').css('margin-left', 240 * ($(window).width() / 1440));
-            });
-            
             $('#close').click(function() {
                 $('#popup_box').fadeOut(50);
             });
@@ -45,8 +40,9 @@
       
       <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="top-link nav navbar-nav navbar-right">
-          <li><a href="document.html">Documentation</a></li>
-          <li><a href="#">Walkthrough</a></li>
+        	<li><a href="index.html">Home</a></li>
+            <li><a href="document.html">Documentation</a></li>
+            <li><a href="#">Walkthrough</a></li>
         </ul>
       </div>
     </nav>
@@ -71,11 +67,13 @@
             <div align="center">
                 <input type="text" placeholder="Chat Room Name" 
                        name="name" id="chatRoomName" />
-                <a href="#" id="newChatButton" class="button">
-                    Join New Chat
-                </a>
+	            <div class="newChat">
+	            	<a href="#" id="newChatButton" class="button">
+	                    Join New Chat
+	                </a>
+	            </div>
             </div>
-            <div align="center">
+            <div align="center" class="rooms">
                 <h1>Current Chat Rooms</h1>
             </div>
             <br />
@@ -101,12 +99,12 @@
                         </textarea>
                         <div class="ui-grid">
                             <div class="ui-block">
+                            	<a href="#" id="backButton" class="button">
+                                    &#60;&#60;Chat Rooms
+                                </a>
+                                &nbsp;
                                 <a href="#" id="sendMessageButton" class="button">
                                     Send Message
-                                </a>
-                                &nbsp;&nbsp;&nbsp;
-                                <a href="#" id="backButton" class="button">
-                                    Chat Rooms
                                 </a>
                             </div>
                         </div>

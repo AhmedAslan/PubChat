@@ -147,6 +147,10 @@ $(document).ready(function() {
 		$('.delete').off('click');
 		$('.delete').click(function() {
 			chatChannel = $(this).attr('id').substring(4);
+			
+			var left = ($(window).width() - $('#popup_box').width() - 34) / 2;
+			$('#popup_box').css('left', left);
+			
 			DeleteChatView();
 		});
 	};
@@ -155,8 +159,8 @@ $(document).ready(function() {
 	// Delete Chat View
 	///////
 	function DeleteChatView(event, data) {
-		var channelName = chatChannel, 
-			deleteButton = pages.deleteRoom.find("#deleteButton");
+		var channelName = chatChannel;
+			
 		$('#popup_box label').text('Room Name : "' + channelName + '"');
 		loadPopupBox();
 
