@@ -81,6 +81,12 @@ body, .navbar-default {
 	    margin-left: 10px;
 	    margin-top: 5px;
 	}
+	.content-area {
+		max-width: 300px;
+	}
+	figure.right {
+	    margin-right: -21px;
+	}
 }
 @media (min-width: 480px) and (max-width: 640px) {
 	#popup_box {
@@ -98,6 +104,9 @@ body, .navbar-default {
 	    margin-bottom: 40px;
 	    margin-left: 5px;
 	    margin-top: 5px;
+	}
+	.content-area {
+		max-width: 460px;
 	}
 }
 @media (min-width: 640px) and (max-width: 980px) {
@@ -142,6 +151,14 @@ body, .navbar-default {
 	    margin-bottom: 60px;
 	    margin-left: 20px;
 	    margin-top: 25px;
+	}
+	.content-area {
+		max-width: 620px;
+	}
+}
+@media (min-width: 980px) and (max-width: 1024px) {
+	.content-area {
+		max-width: 960px;
 	}
 }
 @media (min-width: 1024px) and (max-width: 1440px) {
@@ -188,6 +205,9 @@ body, .navbar-default {
 	    margin-bottom: 40px;
 	    margin-left: 20px;
 	    margin-top: 20px;
+	}
+	.content-area {
+		max-width: 1000px;
 	}
 } 
 .type-home {
@@ -365,4 +385,15 @@ body, .navbar-default {
 }
 .delete:active {
     color: #000;
+}
+.content-area {
+	background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 5px 25px #666666;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+.span3 {
+	float: left;
 }

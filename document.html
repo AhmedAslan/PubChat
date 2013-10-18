@@ -1,44 +1,217 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Documentation</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="icon" type="image/png" href="images/favicon.png">
-    
-    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="css/style.css" rel="stylesheet" media="screen">
-    
-    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
-    <script src="http://cdn.pubnub.com/pubnub-3.5.1.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/function.js"></script>
-      
-  </head>
-  
-  <body>
-    <nav class="navbar navbar-default" role="navigation">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="index.html">
-            <img src="images/logo.png"/>
-        </a>
-      </div>
-      
-      <div class="collapse navbar-collapse navbar-ex1-collapse">
-        <ul class="top-link nav navbar-nav navbar-right">
-        	<li><a href="index.html">Home</a></li>
-            <li><a href="document.html">Documentation</a></li>
-            <li><a href="#">Walkthrough</a></li>
-        </ul>
-      </div>
-    </nav>
-    
-  </body>
+	<head>
+		<title>Documentation</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="icon" type="image/png" href="images/favicon.png">
+
+		<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+		<link href="css/screen.css" rel="stylesheet" media="screen">
+		<link href="css/style.css" rel="stylesheet" media="screen">
+
+		<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+		<script src="http://cdn.pubnub.com/pubnub-3.5.1.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/function.js"></script>
+
+	</head>
+
+	<body>
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar">&nbsp;</span>
+					<span class="icon-bar">&nbsp;</span>
+					<span class="icon-bar">&nbsp;</span>
+				</button>
+				<a class="navbar-brand" href="index.html">
+					<img src="images/logo.png"/> 
+				</a>
+			</div>
+
+			<div class="collapse navbar-collapse navbar-ex1-collapse">
+				<ul class="top-link nav navbar-nav navbar-right">
+					<li>
+						<a href="index.html">Home</a>
+					</li>
+					<li>
+						<a href="document.html">Documentation</a>
+					</li>
+					<li>
+						<a href="#">Walkthrough</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+		<!-- CONTENT -->
+		<div id="content">
+
+			<div class="primary-content content-area" style="padding-top: 0">
+				<div class="container">
+					<h1 class="h-page">How PubNub Works</h1>
+					<p>
+						Today’s users expect to interact in real-time.
+						PubNub makes it easy for you to add real-time capabilities to your apps, without worrying about the infrastructure.  
+						Build apps that allow your users to engage in real-time across mobile, browser, desktop and server.
+					</p>
+
+					<h3 class="h-page">Build, Deploy, and Scale Real-Time Apps</h3>
+
+					<p>
+						The PubNub Real-Time Network takes care of the cloud infrastructure, 
+						connections and key building  blocks for real-time interactivity, 
+						so you can focus on creating killer apps&hellip;
+					</p>
+
+					<div class="row-fluid">
+						<div class="span3">
+							<ul class="m3-bottom">
+								<li>
+									Real-Time Collaboration
+								</li>
+								<li>
+									Machine-to-Machine
+								</li>
+								<li>
+									Real-Time Financial Streams
+								</li>
+								<li>
+									Real-Time Location Tracking
+								</li>
+								<li>
+									Call Triggering
+								</li>
+							</ul>
+						</div>
+
+						<div class="span3">
+							<ul class="m3-bottom">
+								<li>
+									2nd Screen Sync
+								</li>
+								<li>
+									Live Dashboards
+								</li>
+								<li>
+									Multi-Player Games
+								</li>
+								<li>
+									Group Chat Rooms
+								</li>
+								<li>
+									Thousands more&hellip;
+								</li>
+							</ul>
+						</div>
+
+						<figure class="right">
+							<img src="images/pubnub-pulse-1.gif" width="300" height="150" alt="Pulse" class="img-polaroid">
+						</figure>
+					</div>
+					<div style="clear: both;">
+						&nbsp;
+					</div>
+					<p>
+						The PubNub Real-Time Network provides the 
+						<strong>
+							Core Building Blocks for Developing Real-Time Apps:
+						</strong>
+					</p>
+
+					<ul class="m3-bottom feature-list">
+						<li class="two-line">
+							<img src="images/multiplexing.png" alt="PubNub Data Push" />
+							<a href="http://www.pubnub.com/data-push"><strong>Data Push</strong></a>
+							&nbsp; - Establish and maintain persistent socket connections to any device
+							&nbsp; (mobile, browser, desktop and server) 
+							&nbsp; and push data to global audiences in less than ¼ of a second 
+							<a href="http://www.pubnub.com/data-push">Learn More</a>
+						</li>
+						<li>
+							<img src="images/ico-presence.png" alt="PubNub Presence" />
+							<a href="http://www.pubnub.com/presence"><strong>Presence</strong></a>
+							&nbsp; - Automatically detect when users enter or leave your app and whether machines are online 
+							<a href="http://www.pubnub.com/presence">Learn More</a>
+						</li>
+						<li>
+							<img src="images/ico-data-archival.png" alt="PubNub Storage & Playback" />
+							<a href="http://www.pubnub.com/storage-and-playback"><strong>Storage & Playback</strong></a>
+							&nbsp; - Store your real-time data streams for future access, “playback” or re-publish 
+							<a href="http://www.pubnub.com/storage-and-playback">Learn More</a>
+						</li>
+						<li><img src="images/mobile-push-icon.png" alt="PubNub Mobile" />
+							<a href="http://www.pubnub.com/mobile"><strong>Mobile</strong></a>
+							&nbsp; - Easily manage the complexity of real-time apps on mobile devices 
+							<a href="http://www.pubnub.com/mobile">Learn More</a>
+						</li>
+						<li><img src="images/ico-real-time-analytics.png" alt="PubNub Analytics" />
+							<a href="http://www.pubnub.com/analytics"><strong>Analytics</strong></a>
+							&nbsp; - Simulate an audience of millions. See a live view of audience size, engagement and geography 
+							<a href="http://www.pubnub.com/analytics">Learn More</a>
+						</li>
+						<li><img src="images/ico-security.png" alt="PubNub Security" />
+							<a href="http://www.pubnub.com/security"><strong>Security</strong></a>
+							&nbsp; - Protect your real-time data with easy to use enterprise-grade security 
+							<a href="http://www.pubnub.com/security">Learn More</a>
+						</li>
+					</ul>
+
+					<h3 class="h-page">Easy to Use APIs for Mobile, Browser, Desktop and Server</h3>
+
+					<div class="row-fluid">
+						<section class="span3" style="margin-right: 30px;">
+							<p>
+								<code>
+									<span style="color:#969696;">// send events</span>
+									<br />
+									<span style="color:#c70321;">PUBNUB.publish</span>({
+									<br />
+									<span style="color:#4189c1;">&nbsp;&nbsp; channel</span>: "hello_world",
+									<br />
+									<span style="color:#4189c1;">&nbsp;&nbsp; message</span>: "data"
+									<br />
+									});
+								</code>
+							</p>
+						</section>
+						<section class="span3">
+							<p>
+								<code>
+									<span style="color:#969696;">// listen to events</span>
+									<br />
+									<span style="color:#c70321;">PUBNUB.subscribe</span>({
+									<br />
+									<span style="color:#4189c1;">&nbsp;&nbsp; channel</span>: "hello_world",
+									<br />
+									<span style="color:#4189c1;">&nbsp;&nbsp; callback</span>
+									: <span style="color:#1f7202">alert</span>
+									<br />
+									});
+								</code>
+							</p>
+						</section>
+						<div style="clear: both;">
+							&nbsp;
+						</div>
+						<section class="span6">
+							<blockquote>
+								<p>
+									"@sdierforf: Amazing customer support from @PubNub today. Thanks!" PubNub is the cat's meow!
+								</p>
+								<footer>
+									@bradrox <em>July 12, 2013</em>
+								</footer>
+							</blockquote>
+						</section>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /CONTENT -->
+
+	</body>
 </html>
