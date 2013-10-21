@@ -18,9 +18,11 @@ body, .navbar-default {
 }
 .top-link a {
     color: #0000FF;
+    font-size: 16px;
 }
 .top-link a:hover {
     color: #1ABC9C;
+    font-size: 16px;
 }
 @media (min-width:320px) and (max-width:480px) {
 	.navbar {
@@ -297,7 +299,7 @@ body, .navbar-default {
 	font-weight: bold;
 	font-size: 20px;
 }
-.button {
+.button, .button:focus {
     background: #3e779d;
     background: -webkit-gradient(linear, left top, left bottom, from(#65a9d7), to(#3e779d));
     background: -webkit-linear-gradient(top, #65a9d7, #3e779d);
@@ -396,4 +398,31 @@ body, .navbar-default {
 }
 .span3 {
 	float: left;
+}
+code {
+	color: #333333;
+	width: 100%;
+}
+.highlight .c {
+    color: #999988;
+    font-style: italic;
+}
+.highlight .nt {
+    color: #000080;
+}
+.highlight .na {
+    color: #008080;
+}
+.highlight .s, .highlight .s1, .highlight .s2 {
+    color: #DD1144;
+}
+.highlight .c1 {
+    color: #999988;
+    font-style: italic;
+}
+.highlight .o, .highlight .k, .highlight .kd {
+    font-weight: bold;
+}
+.highlight .mi {
+    color: #009999;
 }
