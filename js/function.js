@@ -235,8 +235,7 @@ $(document).ready(function() {
 
 		messageContent.off('keydown');
 		messageContent.bind('keydown', function(event) {
-			if ((event.keyCode || event.charCode) !== 13)
-				return true;
+			if ((event.keyCode || event.charCode) !== 13) return true;
 			sendMessageButton.click();
 			return false;
 		});
@@ -259,7 +258,7 @@ $(document).ready(function() {
 						text : message
 					}
 				
-				ChatView.prototype.handleMessage(message, false);
+				ChatView.prototype.handleMessage(message, true);
 				
 				messageContent.val("");
 			}
@@ -276,22 +275,25 @@ $(document).ready(function() {
 			pages.chat.hide();
 			
 			ChatListView();
-			/*pages.chatList.show();*/
 		});
 	};
 
 	// This handles appending new messages to our chat list.
 	ChatView.prototype.handleMessage = function(message, animate) {
-		if (animate !== false)
-			animate = true;
+		if (animate !== false) animate = true;
 
 		var messageEl = $("<li class='message'>" 
 						+ "<span class='username'>" 
 						+ message.username 
 						+ "</span>&nbsp;:&nbsp;" 
 						+ message.text + "</li>");
-		messageList.append(messageEl);		
+		messageList.append(messageEl);
+		
+		// Scroll to bottom of page
+	    if (animate === true) {
+	      $("html, body").animate(
+	      	{ scrollTop: $(document).height() - $(window).height() }, 'slow');
+	    }		
 	};
-
 	
 });

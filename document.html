@@ -52,161 +52,122 @@
 
 			<div class="primary-content content-area" style="padding-top: 0">
 				<div class="container">
-					<h1 class="h-page">How PubNub Works</h1>
+					<h1 class="h-page">How PubChat Works</h1>
+					
+					<h3 class="h-page">Overview</h3>
 					<p>
-						Today’s users expect to interact in real-time.
-						PubNub makes it easy for you to add real-time capabilities to your apps, without worrying about the infrastructure.  
-						Build apps that allow your users to engage in real-time across mobile, browser, desktop and server.
+						There are many Chatting programs in the world.
+						PubChat is the one of it, makes easy for you to chat with others in real-time.  
+						PubChat allows to use it in real-time across mobile, browser, desktop and server.
 					</p>
-
-					<h3 class="h-page">Build, Deploy, and Scale Real-Time Apps</h3>
-
+					
+					<figure class="right">
+						<img src="images/pubnub-pulse-1.gif" width="300" height="150" alt="Pulse" class="img-polaroid">
+					</figure>
+					
+					<h3 class="h-page">PubChat works based on PubNub</h3>
 					<p>
-						The PubNub Real-Time Network takes care of the cloud infrastructure, 
-						connections and key building  blocks for real-time interactivity, 
-						so you can focus on creating killer apps&hellip;
+						Today’s users expect to interact in real-time. 
+						PubNub makes it easy for you to add real-time capabilities to your apps, without worrying about the infrastructure. 
+						Build apps that allow your users to engage in real-time.
 					</p>
-
-					<div class="row-fluid">
-						<div class="span3">
-							<ul class="m3-bottom">
-								<li>
-									Real-Time Collaboration
-								</li>
-								<li>
-									Machine-to-Machine
-								</li>
-								<li>
-									Real-Time Financial Streams
-								</li>
-								<li>
-									Real-Time Location Tracking
-								</li>
-								<li>
-									Call Triggering
-								</li>
-							</ul>
-						</div>
-
-						<div class="span3">
-							<ul class="m3-bottom">
-								<li>
-									2nd Screen Sync
-								</li>
-								<li>
-									Live Dashboards
-								</li>
-								<li>
-									Multi-Player Games
-								</li>
-								<li>
-									Group Chat Rooms
-								</li>
-								<li>
-									Thousands more&hellip;
-								</li>
-							</ul>
-						</div>
-
-						<figure class="right">
-							<img src="images/pubnub-pulse-1.gif" width="300" height="150" alt="Pulse" class="img-polaroid">
-						</figure>
-					</div>
+					
 					<div style="clear: both;">
 						&nbsp;
 					</div>
-					<p>
-						The PubNub Real-Time Network provides the 
-						<strong>
-							Core Building Blocks for Developing Real-Time Apps:
-						</strong>
-					</p>
-
-					<ul class="m3-bottom feature-list">
-						<li class="two-line">
-							<img src="images/multiplexing.png" alt="PubNub Data Push" />
-							<a href="http://www.pubnub.com/data-push"><strong>Data Push</strong></a>
-							&nbsp; - Establish and maintain persistent socket connections to any device
-							&nbsp; (mobile, browser, desktop and server) 
-							&nbsp; and push data to global audiences in less than ¼ of a second 
-							<a href="http://www.pubnub.com/data-push">Learn More</a>
-						</li>
-						<li>
-							<img src="images/ico-presence.png" alt="PubNub Presence" />
-							<a href="http://www.pubnub.com/presence"><strong>Presence</strong></a>
-							&nbsp; - Automatically detect when users enter or leave your app and whether machines are online 
-							<a href="http://www.pubnub.com/presence">Learn More</a>
-						</li>
-						<li>
-							<img src="images/ico-data-archival.png" alt="PubNub Storage & Playback" />
-							<a href="http://www.pubnub.com/storage-and-playback"><strong>Storage & Playback</strong></a>
-							&nbsp; - Store your real-time data streams for future access, “playback” or re-publish 
-							<a href="http://www.pubnub.com/storage-and-playback">Learn More</a>
-						</li>
-						<li><img src="images/mobile-push-icon.png" alt="PubNub Mobile" />
-							<a href="http://www.pubnub.com/mobile"><strong>Mobile</strong></a>
-							&nbsp; - Easily manage the complexity of real-time apps on mobile devices 
-							<a href="http://www.pubnub.com/mobile">Learn More</a>
-						</li>
-						<li><img src="images/ico-real-time-analytics.png" alt="PubNub Analytics" />
-							<a href="http://www.pubnub.com/analytics"><strong>Analytics</strong></a>
-							&nbsp; - Simulate an audience of millions. See a live view of audience size, engagement and geography 
-							<a href="http://www.pubnub.com/analytics">Learn More</a>
-						</li>
-						<li><img src="images/ico-security.png" alt="PubNub Security" />
-							<a href="http://www.pubnub.com/security"><strong>Security</strong></a>
-							&nbsp; - Protect your real-time data with easy to use enterprise-grade security 
-							<a href="http://www.pubnub.com/security">Learn More</a>
-						</li>
-					</ul>
-
-					<h3 class="h-page">Easy to Use APIs for Mobile, Browser, Desktop and Server</h3>
-
-					<div class="row-fluid">
-						<section class="span3" style="margin-right: 30px;">
-							<p>
-								<code>
-									<span style="color:#969696;">// send events</span>
-									<br />
-									<span style="color:#c70321;">PUBNUB.publish</span>({
-									<br />
-									<span style="color:#4189c1;">&nbsp;&nbsp; channel</span>: "hello_world",
-									<br />
-									<span style="color:#4189c1;">&nbsp;&nbsp; message</span>: "data"
-									<br />
-									});
-								</code>
-							</p>
-						</section>
-						<section class="span3">
-							<p>
-								<code>
-									<span style="color:#969696;">// listen to events</span>
-									<br />
-									<span style="color:#c70321;">PUBNUB.subscribe</span>({
-									<br />
-									<span style="color:#4189c1;">&nbsp;&nbsp; channel</span>: "hello_world",
-									<br />
-									<span style="color:#4189c1;">&nbsp;&nbsp; callback</span>
-									: <span style="color:#1f7202">alert</span>
-									<br />
-									});
-								</code>
-							</p>
-						</section>
-						<div style="clear: both;">
-							&nbsp;
+					
+					<h2 class="h-page"><b>Getting Started</b></h2>
+										
+					<div class="span12">
+				        <div class="highlight">
+					        <h4><b>Adding Dependencies</b></h4>
+					        <p>
+					        	To use PubChat, include following in the <code style="height:30px; width: 70px;">&lt;body&gt;</code> tag on your page.
+					        </p>
+							<pre><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.pubnub.com/pubnub-3.5.1.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"http://code.jquery.com/jquery-1.8.2.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span></pre>
 						</div>
-						<section class="span6">
-							<blockquote>
-								<p>
-									"@sdierforf: Amazing customer support from @PubNub today. Thanks!" PubNub is the cat's meow!
-								</p>
-								<footer>
-									@bradrox <em>July 12, 2013</em>
-								</footer>
-							</blockquote>
-						</section>
+						
+						<div class="highlight">
+							<h4><b>Initializing PubNub</b></h4>
+							<p>
+					        	It is the next step to initialize the PubNub because PubChat works based on PubNub.
+					        </p>
+					        <pre><span class="kd">function</span> <span class="nx">PubNub</span><span class="p">() {</span>
+    <span class="nx">publishKey</span>   <span class="o">:</span> <span class="s1">'key'</span><span class="p">,</span>
+    <span class="nx">subscribeKey</span> <span class="o">:</span> <span class="s1">'key'</span>
+<span class="p">});</span>
+							</pre>
+						</div>
+						
+						<div class="highlight">
+							<h4><b>Connect user to PubChat</b></h4>
+							<p>
+					        	After initialize PubNub, you must connect user to PubChat with user's name.
+					        </p>
+					        <pre><span class="nx">PubNub.prototype.connect = </span><span class="kd">function</span><span class="o">(</span><span class="s1">username</span><span class="kd">) {</span>
+    <span class="nt">this</span><span class="nx">.username = username;</span>
+    <span class="nt">this</span><span class="nx">.connection = </span><span class="kd">PUBNUB</span><span class="nx">.init</span><span class="p">({</span>
+    	<span class="nx">publish_key</span> <span class="o">:</span> <span class="nt">this</span><span class="nx">.publishKey</span><span class="p">,</span>
+    	<span class="nx">subscribe_key</span> <span class="o">:</span> <span class="nt">this</span><span class="nx">.subscribeKey</span><span class="p">,</span>
+    	<span class="nx">uuid</span> <span class="o">:</span> <span class="nt">this</span><span class="nx">.username</span>
+    <span class="p">});</span>
+<span class="p">};</span></pre>
+						</div>
+						
+						<div class="highlight">
+							<h4><b>Publish, Subscribe, History Functions</b></h4>
+							<p>
+								In PubNub, if you change anything, it is published to PubNub, and it is subscribed.
+								When you cancel the change, it is unsubscribed.
+								You can log all change with History Function.
+							</p>
+							<p>
+								For Example, now in your pubchat,<br />
+								When you create new chat room, the room is published and subscribed with channel.<br />
+								Now, you can use the room(really you use the channel).<br />
+								When you chat with someone, you and he/she use the channel, you can get all chatting content with history function.
+							</p>
+							<pre><span class="nx">PubNub.prototype.subscribe = </span><span class="kd">function</span><span class="o">(</span><span class="s1">options</span><span class="kd">) {</span>
+    <span class="nt">this</span><span class="nx">.connection.subscribe.apply(</span><span class="nt">this</span><span class="nx">.connection, arguments);</span>
+    <span class="nt">this</span><span class="nx">.addSubscription(options.channel);</span>
+    <span class="nt">this</span><span class="nx">.saveSubscriptions();</span>
+<span class="p">};</span><br />
+<span class="nx">PubNub.prototype.unsubscribe = </span><span class="kd">function</span><span class="o">(</span><span class="s1">options</span><span class="kd">) {</span>
+    <span class="nt">this</span><span class="nx">.connection.unsubscribe.apply(</span><span class="nt">this</span><span class="nx">.connection, arguments);</span>
+<span class="p">};</span><br />
+<span class="nx">PubNub.prototype.publish = </span><span class="kd">function</span><span class="o">(</span><span class="s1">options</span><span class="kd">) {</span>
+    <span class="nt">this</span><span class="nx">.connection.publish.apply(</span><span class="nt">this</span><span class="nx">.connection, arguments);</span>
+<span class="p">};</span><br />
+<span class="nx">PubNub.prototype.history = </span><span class="kd">function</span><span class="o">(</span><span class="s1">options</span><span class="kd">) {</span>
+    <span class="nt">this</span><span class="nx">.connection.history.apply(</span><span class="nt">this</span><span class="nx">.connection, arguments);</span>
+<span class="p">};</span></pre>
+						</div>
+						
+						<div class="highlight">
+							<p>
+								In the above code, you can see <code style="height: 30px; width: 155px;">addSubscription()</code> and <code style="height: 30px; width: 170px;">saveSubscriptions()</code> functions.
+							</p>
+							<pre><span class="nx">PubNub.prototype.addSubscription = </span><span class="kd">function</span><span class="o">(</span><span class="s1">channel</span><span class="kd">) {</span>
+    <span class="nt">this</span><span class="nx">.subscriptions.push(channel);</span>
+    <span class="nt">this</span><span class="nx">.subscriptions = $.unique(</span><span class="nt">this</span><span class="nx">.subscriptions);</span>
+<span class="p">};</span><br />
+<span class="nx">PubNub.prototype.removeSubscription = </span><span class="kd">function</span><span class="o">(</span><span class="s1">channel</span><span class="kd">) {</span>
+    <span class="k">if</span> <span class="nx">(</span><span class="nt">this</span><span class="nx">.subscriptions.indexOf(channel) !== </span><span class="mi">-1</span><span>) {</span>
+        <span class="nt">this</span><span class="nx">.subscriptions.splice(</span><span class="nt">this</span><span class="nx">.subscriptions.indexOf(channel),</span> <span class="mi">1</span><span class="nx">);</span>
+    <span class="p">}</span>
+    <span class="nt">this</span><span class="nx">.saveSubscriptions();</span>
+<span class="p">};</span><br />
+<span class="nx">PubNub.prototype.saveSubscriptions = </span><span class="kd">function</span><span class="o">(</span><span class="s1">channel</span><span class="kd">) {</span>
+    <span class="nx">localStorage["pn-subscriptions"] =</span> <span class="nt">this</span><span class="nx">.subscriptions;</span>
+<span class="p">};</span></pre>
+						</div>
+					</div>
+					
+					<div class="top-link">
+						<p>
+							You can refer full source code in the <a href="walkthrough.html">Walkthrough</a> page.
+						</p>
 					</div>
 				</div>
 			</div>

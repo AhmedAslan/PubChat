@@ -8,7 +8,7 @@ body, .navbar-default {
 }
 .container {
 	padding-bottom: 10px;
-    padding-top: 20px;
+    padding-top: 25px;
 }
 .collapse {
     max-width: 1170px;
@@ -394,7 +394,7 @@ body, .navbar-default {
     border-radius: 4px 4px 4px 4px;
     box-shadow: 0 5px 25px #666666;
     margin: 0 auto;
-    margin-bottom: 10px;
+    padding-bottom: 0;
 }
 .span3 {
 	float: left;
