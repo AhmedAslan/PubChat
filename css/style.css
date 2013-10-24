@@ -1,5 +1,16 @@
 body, .navbar-default {
-    background: url(../images/back-color.png);
+    background-attachment: fixed;
+    background-color: #850116;
+    background-image: linear-gradient(30deg, #D20222 12%, rgba(0, 0, 0, 0) 12.5%, rgba(0, 0, 0, 0) 87%, #D20222 87.5%, #D20222),
+        			  linear-gradient(150deg, #D20222 12%, rgba(0, 0, 0, 0) 12.5%, rgba(0, 0, 0, 0) 87%, #D20222 87.5%, #D20222), 
+        			  linear-gradient(30deg, #D20222 12%, rgba(0, 0, 0, 0) 12.5%, rgba(0, 0, 0, 0) 87%, #D20222 87.5%, #D20222), 
+        			  linear-gradient(150deg, #D20222 12%, rgba(0, 0, 0, 0) 12.5%, rgba(0, 0, 0, 0) 87%, #D20222 87.5%, #D20222), 
+        			  linear-gradient(60deg, #C50220 25%, rgba(0, 0, 0, 0) 25.5%, rgba(0, 0, 0, 0) 75%, #C50220 75%, #C50220), 
+        			  linear-gradient(60deg, #C50220 25%, rgba(0, 0, 0, 0) 25.5%, rgba(0, 0, 0, 0) 75%, #C50220 75%, #C50220);
+    background-position: 0 0px, 0 0px, 40px 70px, 40px 70px, 0 0px, 40px 70px;
+    background-size: 80px 140px;
+    margin-bottom: 40px;
+    padding: 0;
     border: none;
 }
 .navbar {
@@ -17,12 +28,14 @@ body, .navbar-default {
     margin-top: 20px;
 }
 .top-link a {
-    color: #0000FF;
+    color: #00FF00;
     font-size: 16px;
+    font-weight: bold;
 }
 .top-link a:hover {
-    color: #1ABC9C;
+    color: #FFF;
     font-size: 16px;
+    font-weight: bold;
 }
 @media (min-width:320px) and (max-width:480px) {
 	.navbar {
