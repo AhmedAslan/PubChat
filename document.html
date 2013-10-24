@@ -105,7 +105,7 @@
 							<p>
 					        	After initialize PubNub, you must connect user to PubChat with user's name.
 					        </p>
-					        <pre><span class="nx">PubNub.prototype.connect = </span><span class="kd">function</span><span class="o">(</span><span class="s1">username</span><span class="kd">) {</span>
+					        <pre><span class="nx">PubNub.connect = </span><span class="kd">function</span><span class="o">(</span><span class="s1">username</span><span class="kd">) {</span>
     <span class="nt">this</span><span class="nx">.username = username;</span>
     <span class="nt">this</span><span class="nx">.connection = </span><span class="kd">PUBNUB</span><span class="nx">.init</span><span class="p">({</span>
     	<span class="nx">publish_key</span> <span class="o">:</span> <span class="nt">this</span><span class="nx">.publishKey</span><span class="p">,</span>
@@ -128,18 +128,18 @@
 								Now, you can use the room(really you use the channel).<br />
 								When you chat with someone, you and he/she use the channel, you can get all chatting content with history function.
 							</p>
-							<pre><span class="nx">PubNub.prototype.subscribe = </span><span class="kd">function</span><span class="o">(</span><span class="s1">options</span><span class="kd">) {</span>
+							<pre><span class="nx">PubNub.subscribe = </span><span class="kd">function</span><span class="o">(</span><span class="s1">options</span><span class="kd">) {</span>
     <span class="nt">this</span><span class="nx">.connection.subscribe.apply(</span><span class="nt">this</span><span class="nx">.connection, arguments);</span>
     <span class="nt">this</span><span class="nx">.addSubscription(options.channel);</span>
     <span class="nt">this</span><span class="nx">.saveSubscriptions();</span>
 <span class="p">};</span><br />
-<span class="nx">PubNub.prototype.unsubscribe = </span><span class="kd">function</span><span class="o">(</span><span class="s1">options</span><span class="kd">) {</span>
+<span class="nx">PubNub.unsubscribe = </span><span class="kd">function</span><span class="o">(</span><span class="s1">options</span><span class="kd">) {</span>
     <span class="nt">this</span><span class="nx">.connection.unsubscribe.apply(</span><span class="nt">this</span><span class="nx">.connection, arguments);</span>
 <span class="p">};</span><br />
-<span class="nx">PubNub.prototype.publish = </span><span class="kd">function</span><span class="o">(</span><span class="s1">options</span><span class="kd">) {</span>
+<span class="nx">PubNub.publish = </span><span class="kd">function</span><span class="o">() {</span>
     <span class="nt">this</span><span class="nx">.connection.publish.apply(</span><span class="nt">this</span><span class="nx">.connection, arguments);</span>
 <span class="p">};</span><br />
-<span class="nx">PubNub.prototype.history = </span><span class="kd">function</span><span class="o">(</span><span class="s1">options</span><span class="kd">) {</span>
+<span class="nx">PubNub.history = </span><span class="kd">function</span><span class="o">() {</span>
     <span class="nt">this</span><span class="nx">.connection.history.apply(</span><span class="nt">this</span><span class="nx">.connection, arguments);</span>
 <span class="p">};</span></pre>
 						</div>
@@ -148,17 +148,17 @@
 							<p>
 								In the above code, you can see <code style="height: 30px; width: 155px;">addSubscription()</code> and <code style="height: 30px; width: 170px;">saveSubscriptions()</code> functions.
 							</p>
-							<pre><span class="nx">PubNub.prototype.addSubscription = </span><span class="kd">function</span><span class="o">(</span><span class="s1">channel</span><span class="kd">) {</span>
+							<pre><span class="nx">PubNub.addSubscription = </span><span class="kd">function</span><span class="o">(</span><span class="s1">channel</span><span class="kd">) {</span>
     <span class="nt">this</span><span class="nx">.subscriptions.push(channel);</span>
     <span class="nt">this</span><span class="nx">.subscriptions = $.unique(</span><span class="nt">this</span><span class="nx">.subscriptions);</span>
 <span class="p">};</span><br />
-<span class="nx">PubNub.prototype.removeSubscription = </span><span class="kd">function</span><span class="o">(</span><span class="s1">channel</span><span class="kd">) {</span>
+<span class="nx">PubNub.removeSubscription = </span><span class="kd">function</span><span class="o">(</span><span class="s1">channel</span><span class="kd">) {</span>
     <span class="k">if</span> <span class="nx">(</span><span class="nt">this</span><span class="nx">.subscriptions.indexOf(channel) !== </span><span class="mi">-1</span><span>) {</span>
         <span class="nt">this</span><span class="nx">.subscriptions.splice(</span><span class="nt">this</span><span class="nx">.subscriptions.indexOf(channel),</span> <span class="mi">1</span><span class="nx">);</span>
     <span class="p">}</span>
     <span class="nt">this</span><span class="nx">.saveSubscriptions();</span>
 <span class="p">};</span><br />
-<span class="nx">PubNub.prototype.saveSubscriptions = </span><span class="kd">function</span><span class="o">(</span><span class="s1">channel</span><span class="kd">) {</span>
+<span class="nx">PubNub.saveSubscriptions = </span><span class="kd">function</span><span class="o">() {</span>
     <span class="nx">localStorage["pn-subscriptions"] =</span> <span class="nt">this</span><span class="nx">.subscriptions;</span>
 <span class="p">};</span></pre>
 						</div>

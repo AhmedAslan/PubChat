@@ -58,7 +58,7 @@ $(document).ready(function() {
 	var chatChannel = '', 
 		username = '', 
 		users = [], 
-		usernameInput = $('#username'), 
+		usernameInput = $("#username"), 
 		chatRoomName = $("#chatRoomName"), 
 		chatButton = $("#startChatButton"), 
 		newChatButton = $("#newChatButton"), 
@@ -76,7 +76,7 @@ $(document).ready(function() {
 			chatList : $("#chatListPage"),
 			chat : $("#chatPage"),
 			deleteRoom : $("#delete")
-	};
+		};
 	
 	// Initially start off on the home page.
 	var currentView = new HomeView();
@@ -224,7 +224,6 @@ $(document).ready(function() {
 
 			for (var i = 0; i < messages.length; i++) {
 				ChatView.prototype.handleMessage(messages[i], false);
-				
 			}
 			
 			users.push(usernameInput);
@@ -262,8 +261,6 @@ $(document).ready(function() {
 				
 				messageContent.val("");
 			}
-			
-			
 		});
 
 		backButton.off('click');
