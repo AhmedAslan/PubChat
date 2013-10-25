@@ -1,4 +1,4 @@
-.navbar-default, header {
+body {
     background-attachment: fixed;
     background-color: #850116;
     background-image: linear-gradient(30deg, #D20222 12%, rgba(0, 0, 0, 0) 12.5%, rgba(0, 0, 0, 0) 87%, #D20222 87.5%, #D20222),
@@ -12,29 +12,6 @@
     margin-bottom: 40px;
     padding: 0;
     border: none;
-}
-.navbar {
-	margin: 0px auto;
-}
-.container {
-	padding-bottom: 10px;
-    padding-top: 25px;
-}
-.collapse {
-    max-width: 1170px;
-}
-.top-link {
-    margin-top: 20px;
-}
-.top-link a {
-    color: #00FF00;
-    font-size: 16px;
-    font-weight: bold;
-}
-.top-link a:hover {
-    color: #FFF;
-    font-size: 16px;
-    font-weight: bold;
 }
 @media (min-width:320px) and (max-width:480px) {
 	.navbar-brand {
@@ -92,12 +69,6 @@
 	    margin-left: 10px;
 	    margin-top: 5px;
 	}
-	.content-area {
-		max-width: 300px;
-	}
-	figure.right {
-	    margin-right: -21px;
-	}
 }
 @media (min-width: 480px) and (max-width: 640px) {
 	#popup_box {
@@ -116,16 +87,10 @@
 	    margin-left: 5px;
 	    margin-top: 5px;
 	}
-	.content-area {
-		max-width: 460px;
-	}
 }
 @media (min-width: 640px) and (max-width: 980px) {
 	.navbar-brand {
 	    margin-left: 20%;
-	}
-	.top-link {
-	    padding-right: 10%;
 	}
 	.type-home {
 		margin-left: 14%;
@@ -163,19 +128,8 @@
 	    margin-left: 20px;
 	    margin-top: 25px;
 	}
-	.content-area {
-		max-width: 620px;
-	}
-}
-@media (min-width: 980px) and (max-width: 1024px) {
-	.content-area {
-		max-width: 960px;
-	}
 }
 @media (min-width: 1024px) and (max-width: 1440px) {
-	.collapse {
-	    max-width: 1000px;
-	}
 	.type-home {
 		margin-left: 24%;
 		margin-top: 20px;
@@ -216,9 +170,6 @@
 	    margin-bottom: 40px;
 	    margin-left: 20px;
 	    margin-top: 20px;
-	}
-	.content-area {
-		max-width: 1000px;
 	}
 } 
 .type-home {
@@ -396,42 +347,4 @@
 }
 .delete:active {
     color: #000;
-}
-.content-area {
-	background-color: #FFFFFF;
-    border: 1px solid #CCCCCC;
-    border-radius: 4px 4px 4px 4px;
-    box-shadow: 0 5px 25px #666666;
-    margin: 0 auto;
-    padding-bottom: 0;
-}
-.span3 {
-	float: left;
-}
-code {
-	color: #333333;
-	width: 100%;
-}
-.highlight .c {
-    color: #999988;
-    font-style: italic;
-}
-.highlight .nt {
-    color: #000080;
-}
-.highlight .na {
-    color: #008080;
-}
-.highlight .s, .highlight .s1, .highlight .s2 {
-    color: #DD1144;
-}
-.highlight .c1 {
-    color: #999988;
-    font-style: italic;
-}
-.highlight .o, .highlight .k, .highlight .kd {
-    font-weight: bold;
-}
-.highlight .mi {
-    color: #009999;
 }
